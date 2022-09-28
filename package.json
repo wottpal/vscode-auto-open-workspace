@@ -3,6 +3,10 @@
   "displayName": "AutoOpenWorkspace",
   "description": "VSCode Extension that checks for *.code-workspace files in the active directory and offers to open them instead.",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wottpal/vscode-auto-open-workspace"
+  },
   "engines": {
     "vscode": "^1.71.0"
   },
