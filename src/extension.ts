@@ -5,7 +5,7 @@ import { commands, ExtensionContext, window, workspace } from "vscode";
  * Checks for `.code-workspace` files and opens a quick-pick to
  * select one to open in the current window.
  */
-async function openWorkspaceFile() {
+async function openWorkspaceFile(disableAutoOpen?: boolean) {
 	// Find all `.code-workspace` files
 	const uris = await workspace.findFiles('**/*.code-workspace');
 	if (!uris?.length) {
@@ -15,7 +15,16 @@ async function openWorkspaceFile() {
 	}
 	console.log(`${uris.length} workspace-file(s) found. Open Quick Pick…`);
 
-	// Open Quick Pick
+	// Read configuration to check whether to open automatically
+	const config = workspace.getConfiguration('autoOpenWorkspace');
+	const doAutoOpen = config.get('enableAutoOpenIfSingleWorkspace') && uris.length === 1 
+		|| config.get('enableAutoOpenAlwaysFirst');
+	if (!disableAutoOpen && doAutoOpen) {
+		console.log("Automatically opening first detected workspace-file:", uris[0]);
+		commands.executeCommand('vscode.openFolder', uris[0]);
+	}
+
+	// Open Selection Menu as QuickPick
 	const quickPick = window.createQuickPick();
 	quickPick.title = `${uris.length} workspace-file(s) found! Select to open…`;
 	quickPick.ignoreFocusOut = true;
@@ -50,7 +59,7 @@ export async function activate(context: ExtensionContext) {
 	}
 
 	let disposable = commands.registerCommand('auto-open-workspace.open-workspace-file', () => {
-		openWorkspaceFile();
+		openWorkspaceFile(true);
 	});
 	context.subscriptions.push(disposable);
 }
