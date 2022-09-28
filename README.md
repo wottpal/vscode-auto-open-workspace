@@ -14,7 +14,7 @@ Read more about VSCode Workspaces and how they work [here](https://code.visualst
 I will release the extension to the VSCode Marketplace soon, until then download the [latest release](https://github.com/wottpal/vscode-auto-open-workspace/releases) and execute:
 
 ```bash
-code --install-extension vscode-auto-open-workspace-0.0.1.vsix --force 
+code --install-extension vscode-auto-open-workspace-0.0.2.vsix --force 
 ```
 
 
