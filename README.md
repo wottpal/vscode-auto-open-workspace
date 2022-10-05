@@ -14,7 +14,7 @@ Read more about VSCode Workspaces and how they work [here](https://code.visualst
 I will release the extension to the VSCode Marketplace soon, until then download the [latest release](https://github.com/wottpal/vscode-auto-open-workspace/releases) and execute:
 
 ```bash
-code --install-extension vscode-auto-open-workspace-0.0.2.vsix --force 
+code --install-extension vscode-auto-open-workspace-0.0.3.vsix --force 
 ```
 
 
@@ -22,11 +22,15 @@ code --install-extension vscode-auto-open-workspace-0.0.2.vsix --force
 
 This extension contributes the following settings:
 
-* `autoOpenWorkspace.enableAutoOpenIfSingleWorkspace`: Automatically open workspace-file (if only one was detected). Select menu is shown otherwise. (defaults to `true`)
+* `autoOpenWorkspace.enableAutoOpenIfSingleWorkspace`: Automatically open workspace-file (if only one was detected). Select menu is shown otherwise. (defaults to `false`)
 * `autoOpenWorkspace.enableAutoOpenAlwaysFirst`: Always automatically open first detected workspace-file. (defaults to `false`)
 
 
 ## Release Notes
+
+### 0.0.3
+
+Change the `autoOpenWorkspace.enableAutoOpenIfSingleWorkspace` to default `false` which is a more saner default.
 
 ### 0.0.2
 

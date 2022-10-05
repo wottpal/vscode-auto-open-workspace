@@ -2,7 +2,7 @@
   "name": "vscode-auto-open-workspace",
   "displayName": "Auto-Open Workspace",
   "description": "VSCode Extension that checks for *.code-workspace files in the active directory and offers to open them instead.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/wottpal/vscode-auto-open-workspace"
@@ -30,7 +30,7 @@
       "properties": {
         "autoOpenWorkspace.enableAutoOpenIfSingleWorkspace": {
           "type": "boolean",
-          "default": true,
+          "default": false,
           "description": "Automatically open workspace-file (if only one was detected). Select menu is shown otherwise."
         },
         "autoOpenWorkspace.enableAutoOpenAlwaysFirst": {
