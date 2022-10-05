@@ -11,10 +11,12 @@ Read more about VSCode Workspaces and how they work [here](https://code.visualst
 
 ## Installation
 
-I will release the extension to the VSCode Marketplace soon, until then download the [latest release](https://github.com/wottpal/vscode-auto-open-workspace/releases) and execute:
+You can install the extension directly from the [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=zoma.vscode-auto-open-workspace).
+
+Alternatively, download the [latest release](https://github.com/wottpal/vscode-auto-open-workspace/releases) and execute:
 
 ```bash
-code --install-extension vscode-auto-open-workspace-0.0.3.vsix --force 
+code --install-extension vscode-auto-open-workspace-X.X.X.vsix --force 
 ```
 
 
@@ -27,6 +29,10 @@ This extension contributes the following settings:
 
 
 ## Release Notes
+
+### 0.0.4
+
+New app icon by DALL·E 2.
 
 ### 0.0.3
 
