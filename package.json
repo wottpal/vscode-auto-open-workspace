@@ -20,7 +20,6 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:auto-open-workspace.open-workspace-file",
     "workspaceContains:**/*.code-workspace"
   ],
   "main": "./dist/extension.js",
